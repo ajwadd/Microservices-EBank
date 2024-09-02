@@ -1,0 +1,37 @@
+services:
+  accounts:
+    image: "abdelhafid90/accounts:v1"
+    container_name: accounts-ms
+    ports:
+      - "8081:8081"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - ebank
+  loans:
+    image: "abdelhafid90/loans:v1"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - ebank
+  cards:
+      image: "abdelhafid90/cards:v1"
+      container_name: cards-ms
+      ports:
+        - "9000:9000"
+      deploy:
+        resources:
+          limits:
+            memory: 700m
+      networks:
+        - ebank
+networks:
+  ebank:
+    driver: "bridge"
