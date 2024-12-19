@@ -1,6 +1,6 @@
 package com.eazybytes.accounts.mapper;
 
-import com.eazybytes.accounts.Entity.Accounts;
+import com.eazybytes.accounts.domain.Accounts;
 import com.eazybytes.accounts.dto.AccountsDto;
 
 

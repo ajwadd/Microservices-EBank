@@ -1,4 +1,4 @@
-package com.eazybytes.accounts.Entity;
+package com.eazybytes.accounts.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,6 +6,7 @@ import lombok.*;
 
 @Getter @Setter @ToString @AllArgsConstructor @NoArgsConstructor
 @Entity
+@Builder
 public class Customer extends BaseEntity {
 
 

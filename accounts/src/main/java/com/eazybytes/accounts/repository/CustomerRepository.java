@@ -1,7 +1,7 @@
 package com.eazybytes.accounts.repository;
 
 
-import com.eazybytes.accounts.Entity.Customer;
+import com.eazybytes.accounts.domain.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
