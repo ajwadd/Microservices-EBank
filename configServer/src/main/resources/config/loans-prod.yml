@@ -1,7 +1,7 @@
 build:
   version: "1.0"
 
-accounts:
+loans:
   message: "Welcome to EBank loans related prod APIs "
   contactDetails:
     name: "Reine Ai - Product Owner"

@@ -1,11 +1,10 @@
 build:
   version: "3.0"
-
 accounts:
-  message: "Welcome to EBank accounts related local APIs "
+  message: "Welcome to EBank accounts related local APIs"
   contactDetails:
     name: "John Doe - Developer"
     email: "john@ebank.com"
-  onCallSupport:
-    - (555) 555-1234
-    - (555) 523-1345
+    onCallSupport:
+      - "(555) 555-1234"
+      - "(555) 523-1345"

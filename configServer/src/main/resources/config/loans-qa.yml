@@ -1,7 +1,7 @@
 build:
   version: "2.0"
 
-accounts:
+loans:
   message: "Welcome to EBank loans related QA APIs "
   contactDetails:
     name: "Smith Doe - QA Lead"

@@ -1,11 +1,10 @@
 build:
   version: "2.0"
-
-accounts:
-  message: "Welcome to EBank cards related QA APIs "
+cards:
+  message: "Welcome to EBank cards related QA APIs"
   contactDetails:
     name: "Smith Doe - QA Lead"
     email: "smith@ebank.com"
   onCallSupport:
-    - (555) 555-1236
-    - (555) 523-1346
+    - "(555) 555-1236"
+    - "(555) 523-1346"
