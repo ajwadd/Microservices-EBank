@@ -8,7 +8,7 @@ public class CustomerAlreadyExistsException extends RuntimeException {
 
 
     public CustomerAlreadyExistsException(String message){
-        super(message);
+        super("customer "+ message + "already exists");
     }
 
 

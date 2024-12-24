@@ -1,4 +1,4 @@
-package com.eazybytes.accounts.Entity;
+package com.eazybytes.accounts.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

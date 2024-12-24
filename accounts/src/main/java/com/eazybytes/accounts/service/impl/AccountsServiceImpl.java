@@ -1,7 +1,7 @@
 package com.eazybytes.accounts.service.impl;
 
-import com.eazybytes.accounts.Entity.Accounts;
-import com.eazybytes.accounts.Entity.Customer;
+import com.eazybytes.accounts.domain.Accounts;
+import com.eazybytes.accounts.domain.Customer;
 import com.eazybytes.accounts.constants.AccountsConstants;
 import com.eazybytes.accounts.dto.AccountsDto;
 import com.eazybytes.accounts.dto.CustomerDto;
@@ -13,7 +13,6 @@ import com.eazybytes.accounts.repository.AccountsRepository;
 import com.eazybytes.accounts.repository.CustomerRepository;
 import com.eazybytes.accounts.service.IAccountsService;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -29,11 +28,10 @@ public class AccountsServiceImpl implements IAccountsService {
     @Override
     public void createAccount(CustomerDto customerDto) {
         Customer customer = CustomersMapper.mapToCustomer(customerDto,new Customer());
-        Optional<Customer> optionalCustomer = customerRepository.findByMobileNumber(customerDto.getMobileNumber());
-        if(optionalCustomer.isPresent()){
-            throw new CustomerAlreadyExistsException("Customer already registered with given mobile Number"
-                    +customerDto.getMobileNumber());
-        }
+        customerRepository
+                .findByMobileNumber(customerDto.getMobileNumber())
+                .ifPresent(c -> { throw  new CustomerAlreadyExistsException(customer.getName());} );
+
         Customer savedCustomer =  customerRepository.save(customer);
         accountRepository.save(createNewAccount(savedCustomer));
 
